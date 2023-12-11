@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    padding: 0.5rem;
+}
+#input ~ #focus {
+    flex-grow: 1;
+    cursor: text;
+}
+#input #code,
+#console .line {
+    font-family: monospace;
+    border: 0;
+    outline: 0;
+    resize: vertical;
+    width: 100%;
+    min-height: 31px;
+}
+#console .line:focus {
+    outline: auto;
+}
+#console details.line ul {
+    padding-inline-start: 2.5rem;
+}
+#console .line.log {
+    background-color: lightgray;
+}
+#console .line.warn {
+    background-color: lightgoldenrodyellow;
+}
+#console .line.error {
+    background-color: palevioletred;
+}

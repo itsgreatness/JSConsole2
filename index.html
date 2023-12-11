@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Console</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="console" onkeydown="onKeyDown(event)" ondblclick="onDoubleClick(event)"></div>
+    <form id="input" onsubmit="onSubmit(event)">
+        <textarea autocapitalize="off" autofocus id="code" name="code"
+            oninput="this.style.height = `${this.scrollHeight}px`"
+            onkeydown="if (event.key === 'Enter' && !event.shiftKey && this.value > '' ) { event.preventDefault(); this.parentElement.requestSubmit(); }"
+            spellcheck="false"></textarea>
+    </form>
+    <label id="focus" for="code"></label>
+    <script src="Stringify.js"></script>
+    <script src="ArrowFocus.js"></script>
+    <script src="Runtime.js"></script>
+</body>
+
+</html>
